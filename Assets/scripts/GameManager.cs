@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public Animator animator;
     private bool gameEnded = false;
     public static bool gameWon;
-    private int maxLevelSceneBuildIndex = 11;
+    private int maxLevelSceneBuildIndex = 12;
 
     public GameObject score;
     public GameObject pauseMenu;
