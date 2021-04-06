@@ -1285,10 +1285,10 @@ MonoBehaviour:
   reverseOnNewPin: 0
   changesSpeed: 1
   increasesSpeedOnPin: 0
-  normalSpeed: 80
-  increasedSpeed: 120
+  normalSpeed: 111
+  increasedSpeed: 166
   secondsBetween: 0.5
-  pinsToWin: 10
+  pinsToWin: 11
   speedIncreaseFactor: 1
 --- !u!1001 &1925466349
 PrefabInstance:
