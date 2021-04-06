@@ -1048,7 +1048,7 @@ MonoBehaviour:
   normalSpeed: 40
   increasedSpeed: 0
   secondsBetween: 0
-  pinsToWin: 20
+  pinsToWin: 13
   speedIncreaseFactor: 1.2
 --- !u!1001 &1925466349
 PrefabInstance:
