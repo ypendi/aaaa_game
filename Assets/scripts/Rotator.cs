@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
-    public float normalSpeed = 60f;
 
     public bool reverseOnNewPin;
     public bool changesSpeed;
+    public bool increasesSpeedOnPin;
+    public float normalSpeed;
     public float increasedSpeed;
     public float secondsBetween;
     public int pinsToWin;
     private bool speedIsChanged;
+    public float speedIncreaseFactor = 1f;
+
 
     private void Start()
     {

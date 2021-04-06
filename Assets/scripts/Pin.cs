@@ -34,6 +34,11 @@ public class Pin : MonoBehaviour
                 rotatorScript.normalSpeed *= -1;
                 rotatorScript.increasedSpeed *= -1;
             }
+            if (rotatorScript.increasesSpeedOnPin)
+            {
+                rotatorScript.normalSpeed *= rotatorScript.speedIncreaseFactor;
+                rotatorScript.increasedSpeed *= rotatorScript.speedIncreaseFactor;
+            }
         }
         if(other.tag == "Pin")
         {
