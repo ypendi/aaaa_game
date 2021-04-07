@@ -5,6 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject pinPrefab;
+    public AudioSource pinHit;
     bool bugFix;
 
     private void Start()
@@ -20,6 +21,7 @@ public class Spawner : MonoBehaviour
             Vector3 touchPos = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
             if(touchPos.y < 4)
                 Instantiate(pinPrefab, transform.position, transform.rotation);
+                pinHit.Play();
         }
         bugFix = false;
     }

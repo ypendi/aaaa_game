@@ -3,7 +3,9 @@ guid: cacafb66466fef846a7d9d275f7a510a
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pinPrefab: {fileID: 8196682676750740886, guid: b4fb9ef8e8561e54b89243ea98695111, type: 3}
+  - pinHit: {fileID: 1227600929373068947, guid: 34208b018f657f641a5947c69f76cc0a, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

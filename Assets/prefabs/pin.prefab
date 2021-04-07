@@ -194,4 +194,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 8196682676750740881}
+  rotatorScript: {fileID: 0}
   speed: 30

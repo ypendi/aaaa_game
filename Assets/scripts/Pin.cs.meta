@@ -3,7 +3,11 @@ guid: 99ebd31bca68c80408bea28e924ea2e0
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - rb: {instanceID: 0}
+  - rotatorScript: {instanceID: 0}
+  - pinHit: {fileID: 1227600929373068947, guid: 34208b018f657f641a5947c69f76cc0a, type: 3}
+  - pinHitClip: {fileID: 8300000, guid: 7ad86a2e07d6b184ea3771d1a685d667, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
