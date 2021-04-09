@@ -13,13 +13,14 @@ public class GameManager : MonoBehaviour
     public static bool gameWon;
     private int maxLevelSceneBuildIndex = 21;
 
+    private GameObject aaaa_hit;
     public GameObject score;
     public GameObject pauseMenu;
     //public Button clickBtn;
 
     private void Start()
     {
-    
+        aaaa_hit = GameObject.Find("aaaa_hit");
         if (PlayerPrefs.GetInt("maxLevel") > maxLevelSceneBuildIndex)
             PlayerPrefs.SetInt("maxLevel", maxLevelSceneBuildIndex);
 
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
     {
         if (gameEnded)
             return;
+        aaaa_hit.SetActive(false); //so it doesnt play both sounds a 
         gameEnded = true;
         animator.SetBool("gameOver", true);
         rotatorScript.enabled = false;

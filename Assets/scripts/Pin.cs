@@ -8,11 +8,17 @@ public class Pin : MonoBehaviour
     public Rigidbody2D rb;
     public Rotator rotatorScript;
 
+    public AudioSource pinHit;
+    public AudioSource pinFail;
+
     public float speed = 30f;
     private bool isPinned;
 
+
     private void Start()
     {
+        pinHit = GameObject.Find("aaaa_hit").GetComponent<AudioSource>();
+        pinFail = GameObject.Find("aaaa_fail").GetComponent<AudioSource>();
         rotatorScript = FindObjectOfType<Rotator>();
     }
 
@@ -29,6 +35,7 @@ public class Pin : MonoBehaviour
             isPinned = true;
             transform.SetParent(other.transform);
             Score.score--;
+            pinHit.Play();
             if (rotatorScript.reverseOnNewPin)
             {
                 rotatorScript.normalSpeed *= -1;
@@ -42,6 +49,7 @@ public class Pin : MonoBehaviour
         }
         if(other.tag == "Pin")
         {
+            pinFail.Play();
             FindObjectOfType<GameManager>().LevelLost();
         }
     }

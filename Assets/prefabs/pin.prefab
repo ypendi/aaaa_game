@@ -195,4 +195,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 8196682676750740881}
   rotatorScript: {fileID: 0}
+  pinFail: {fileID: 6071420726263337401, guid: 57773e239404fb045b42df4926efe349, type: 3}
   speed: 30
