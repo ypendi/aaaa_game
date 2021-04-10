@@ -10,22 +10,34 @@ public class GameManager : MonoBehaviour
     public Spawner spawnerScript;
     public Animator animator;
     private bool gameEnded = false;
+    public bool soundOn = true;
     public static bool gameWon;
     private int maxLevelSceneBuildIndex = 21;
 
+    private AudioListener audioListener;
     private GameObject aaaa_hit;
     public GameObject score;
     public GameObject pauseMenu;
+    public GameObject soundToggle;
     //public Button clickBtn;
+
+
+    private void Awake()
+    {
+        aaaa_hit = GameObject.Find("aaaa_hit");
+
+        if (SceneManager.GetActiveScene().buildIndex == 0) // bad fix but bc if StartScreen is loaded, the sound toggle is on soundON
+        {
+            AudioListener.volume = 1;
+            soundOn = true;
+        }
+    }
 
     private void Start()
     {
-        aaaa_hit = GameObject.Find("aaaa_hit");
+
         if (PlayerPrefs.GetInt("maxLevel") > maxLevelSceneBuildIndex)
             PlayerPrefs.SetInt("maxLevel", maxLevelSceneBuildIndex);
-
-        //if (Input.GetMouseButtonDown(0))
-        //    Debug.Log("187");
     }
 
     private void Update()
@@ -46,6 +58,25 @@ public class GameManager : MonoBehaviour
         if (Input.GetKey(KeyCode.Escape))
         {
             Pause();
+        }
+        
+        if(AudioListener.volume == 0)
+            soundOn = false;
+        else
+            soundOn = true;
+        
+    }
+
+    public void SoundChange()
+    {
+        if (soundOn)
+        {
+            AudioListener.volume = 0;
+        }
+
+        else
+        {
+            AudioListener.volume = 1;
         }
     }
 
